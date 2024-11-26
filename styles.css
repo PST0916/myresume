@@ -1,0 +1,184 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: max-height 0.3s ease-out;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.section:nth-child(odd) {
+    background-color: #fff;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Resume Image */
+.resume-image {
+    display: block;
+    max-width: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.resume-image:hover {
+    transform: scale(1.1);
+}
+
+/* 背景 GIF */
+.background-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/welcome.gif'); /* 背景圖片 */
+    background-size: cover; /* 確保 GIF 完整覆蓋區域 */
+    background-position: center;
+    z-index: -1; /* 確保 GIF 在背景 */
+}
+
+/* 歡迎區域 */
+#welcome {
+    position: relative;
+    height: 100vh; /* 全螢幕高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #000; /* 避免 GIF 未載入時有明顯空白 */
+}
+
+/* 歡迎內容 */
+.welcome-content {
+    position: relative;
+    z-index: 1; /* 文字位於 GIF 之上 */
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* 提升文字可讀性 */
+}
+
+.welcome-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}

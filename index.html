@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位履歷</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>我的數位履歷</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#welcome">歡迎介面</a></li>
+                    <li><a href="#resume">個人簡歷</a></li>
+                    <li><a href="#education">學習歷程</a></li>
+                    <li><a href="#competition">比賽經歷</a></li>
+                    <li><a href="#works">個人創作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome" class="section">
+            <!-- 背景 GIF -->
+            <div class="background-gif"></div>
+            <!-- 歡迎文字內容 -->
+            <div class="welcome-content">
+                <h2>歡迎介面</h2>
+                <p>歡迎來到我的數位履歷！在這裡，你可以了解我的背景、成就及創作。</p>
+            </div>
+        </section>
+
+        <section id="resume" class="section">
+            <h2>個人簡歷</h2>
+            <img src="./image/resume_image.jpeg" alt="個人簡歷照片" class="resume-image">
+            <div class="introduction">
+                <p>我的名字：彭詩婷</p>
+                <p>出生年月：2003/12/23</p>
+                <p>Email：pengting1223@gmail.com</p>
+                <p>手機：0912040129</p>
+                <p>專長：睡覺</p>
+            </div>
+            <p>簡要介紹你的教育背景、工作經歷以及主要技能。</p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>學習歷程</h2>
+            <p>分享你的學術或專業培訓經驗，並強調學習中的重要里程碑。</p>
+        </section>
+
+        <section id="competition" class="section">
+            <h2>比賽經歷</h2>
+            <p>列出你參加過的重要比賽、獲得的獎項及相關成就。</p>
+        </section>
+
+        <section id="works" class="section">
+            <h2>個人創作</h2>
+            <p>展示你的作品集或創意專案，包括圖片或鏈接。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的數位履歷 | Designed by 資深網頁設計師</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
